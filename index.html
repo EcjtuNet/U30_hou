@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>后台首页</title>
+		
+		 <!-- Bootstrap -->
+	    <link href="css/bootstrap.min.css" rel="stylesheet">
+	    <link href="css/ace.min.css" rel="stylesheet">
+	    <link href="css/font-awesome.min.css" rel="stylesheet">
+	    <link href="css/U30_hou.css"rel="stylesheet">
+	
+		<script src="js/U30_hou.js"></script>
+		<script type="text/javascript" src="ckeditor/ckeditor.js"></script>
+	    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	    <!--[if lt IE 9]>
+	     	<script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	      	<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+	</head>
+	<body>
+		<div class="navbar navbar-default">
+			
+			<div class="navbar-header pull-left">
+				<a href="#" class="navbar-brand">
+					<i class=""></i>
+					U30后台管理系统
+				</a>
+			</div>
+			<div class="navbar-header pull-right">
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="#">
+							<img src="" class="img-circle img-responsive" alt="">
+							<span class="">登陆</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="" class="img-circle img-responsive" alt="">
+							<span class="">退出</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			
+		</div>
+		
+		<div class="main-container" id="main-container">
+			<div class="main-container-inner">
+				<a class="menu-toggler" id="menu-toggler" href="#">
+					<span class="menu-text"></span>
+				</a>
+
+				<div class="sidebar">
+					<ul class="nav nav-list">
+						<li class="active">
+							<a href="index.html" class="dropdown-toggle">
+								<i class="icon-desktop"></i>
+								<span class="menu-text"> 后台首页 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+						</li>
+						
+						<li>
+							<a href="#" class="dropdown-toggle" target="_blank">
+								<i class="icon-eye-open"></i>
+								<span class="menu-text"> 前台首页 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+						</li>
+						
+						<li>
+							<a href="arctic.html" class="dropdown-toggle">
+								<i class="icon-book"></i>
+								<span class="menu-text"> 文章管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+							<ul class="submenu">
+								<li>
+									<a href="arctic_add.html">
+										<i class="icon-double-angle-right"></i>
+										文章添加
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="icon-double-angle-right"></i>
+										文章查询
+									</a>
+								</li>
+							</ul>
+						</li>
+						
+						<li>
+							<a href="user.html" class="dropdown-toggle">
+								<i class="icon-user"></i>
+								<span class="menu-text"> 个人信息 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+							<ul class="submenu">
+								<li>
+									<a href="user_search.html">
+										<i class="icon-double-angle-right"></i>
+										查询信息
+									</a>
+								</li>
+								<li>
+									<a href="user_edit.html">
+										<i class="icon-double-angle-right"></i>
+										修改信息
+									</a>
+								</li>
+							</ul>
+						</li>
+						<script type="text/javascript">
+							(function(){
+								var liElements=document.querySelectorAll(".nav-list > li");
+								var list_a=document.querySelectorAll(".nav-list > li > a");
+								for(var i=0;i<liElements.length;i++){
+									liElements[i].addEventListener("click",function(e){
+										var list_a=document.querySelectorAll(".nav-list > li");
+										for(var i=0;i<list_a.length;i++){
+											var list=liElements[i].classList;
+											list.remove("active");
+										}
+										var list=this.classList;
+										list.toggle("active");
+									});
+								}
+							})();
+						</script>
+					</ul><!-- /.nav-list -->
+					
+					<div class="sidebar-collapse" id="sidebar-collapse">
+						<i class="icon-double-angle-left" data-icon1="icon-double-angle-left" data-icon2="icon-double-angle-right"></i>
+					</div>
+				</div>
+			
+				<div class="main-content">
+					<div class="breadcrumbs" id="breadcrumbs">
+
+						<ul class="breadcrumb">
+							<li>
+								<i class="icon-desktop"></i>
+								<a href="index.html">后台首页</a>
+							</li>
+							<!--<li class="active">资讯列表</li>-->
+						</ul><!-- .breadcrumb -->
+						
+					</div>
+
+					<div class="page-content">
+						<div class="page-header">
+							<h1>
+								后台首页
+								<small>
+									<i class="icon-double-angle-right"></i>
+									 查看
+								</small>
+							</h1>
+						</div><!-- /.page-header -->
+
+						<div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
+
+								<div class="alert alert-block alert-success">
+									<button type="button" class="close" data-dismiss="alert">
+										<i class="icon-remove"></i>
+									</button>
+
+									<i class="icon-ok green"></i>
+
+									欢迎进入
+									<strong class="green">
+										U30后台管理系统
+										<small>(v1.0)</small>
+									</strong>
+								</div>
+								
+								<div class="row">
+									<!-- PAGE CONTENT BEGINS -->
+									
+								</div>
+							
+								<!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div><!-- /.main-content -->
+			</div>
+		</div>
+		
+		
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="js/jquery-1.11.1.min.js"></script>
+    	<!-- Include all compiled plugins (below), or include individual files as needed -->
+   	 	<script src="js/bootstrap.min.js"></script>
+  	</body>
+</html>

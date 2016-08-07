@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>文章添加</title>
+		
+		 <!-- Bootstrap -->
+	    <link href="css/bootstrap.min.css" rel="stylesheet">
+	    <link href="css/ace.min.css" rel="stylesheet">
+	    <link href="css/font-awesome.min.css" rel="stylesheet">
+	    <link href="css/U30_hou.css"rel="stylesheet"
+	    
+	    <script src="js/U30_hou.js"></script>
+		<script type="text/javascript" src="ckeditor/ckeditor.js"></script>
+	
+	    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	    <!--[if lt IE 9]>
+	     	<script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	      	<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+	</head>
+	<body>
+		<div class="navbar navbar-default">
+			
+			<div class="navbar-header pull-left">
+				<a href="#" class="navbar-brand">
+					<i class=""></i>
+					U30后台管理系统
+				</a>
+			</div>
+			<div class="navbar-header pull-right">
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="#">
+							<img src="" class="img-circle img-responsive" alt="">
+							<span class="">登陆</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="" class="img-circle img-responsive" alt="">
+							<span class="">退出</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			
+		</div>
+		
+		<div class="main-container" id="main-container">
+			<div class="main-container-inner">
+				<a class="menu-toggler" id="menu-toggler" href="#">
+					<span class="menu-text"></span>
+				</a>
+
+				<div class="sidebar">
+					<ul class="nav nav-list">
+						<li>
+							<a href="index.html" class="dropdown-toggle">
+								<i class="icon-desktop"></i>
+								<span class="menu-text"> 后台首页 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+						</li>
+						
+						<li>
+							<a href="#" class="dropdown-toggle" target="_blank">
+								<i class="icon-eye-open"></i>
+								<span class="menu-text"> 前台首页 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+						</li>
+						
+						<li class="active">
+							<a href="arctic.html" class="dropdown-toggle">
+								<i class="icon-book"></i>
+								<span class="menu-text"> 文章管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+							<ul class="submenu">
+								<li>
+									<a href="arctic_add.html">
+										<i class="icon-double-angle-right"></i>
+										文章添加
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="icon-double-angle-right"></i>
+										文章查询
+									</a>
+								</li>
+							</ul>
+						</li>
+						
+						<li>
+							<a href="user.html" class="dropdown-toggle">
+								<i class="icon-user"></i>
+								<span class="menu-text"> 个人信息 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+							<ul class="submenu">
+								<li>
+									<a href="user_search.html">
+										<i class="icon-double-angle-right"></i>
+										查询信息
+									</a>
+								</li>
+								<li>
+									<a href="user_edit.html">
+										<i class="icon-double-angle-right"></i>
+										修改信息
+									</a>
+								</li>
+							</ul>
+						</li>
+						<script type="text/javascript">
+							(function(){
+								var liElements=document.querySelectorAll(".nav-list > li");
+								var list_a=document.querySelectorAll(".nav-list > li > a");
+								for(var i=0;i<liElements.length;i++){
+									liElements[i].addEventListener("click",function(e){
+										var list_a=document.querySelectorAll(".nav-list > li");
+										for(var i=0;i<list_a.length;i++){
+											var list=liElements[i].classList;
+											list.remove("active");
+										}
+										var list=this.classList;
+										list.toggle("active");
+									});
+								}
+							})();
+						</script>
+					</ul><!-- /.nav-list -->
+					
+					<div class="sidebar-collapse" id="sidebar-collapse">
+						<i class="icon-double-angle-left" data-icon1="icon-double-angle-left" data-icon2="icon-double-angle-right"></i>
+					</div>
+				</div>
+			
+				<div class="main-content">
+					<div class="breadcrumbs" id="breadcrumbs">
+
+						<ul class="breadcrumb">
+							<li>
+								<i class="icon-book"></i>
+								<a href="arctic.html">文章管理</a>
+							</li>
+							<li class="active">文章添加</li>
+						</ul><!-- .breadcrumb -->
+						
+					</div>
+
+					<div class="page-content">
+						<div class="page-header">
+							<h1>
+								文章添加
+								<small>
+									<i class="icon-double-angle-right"></i>
+									 查看
+								</small>
+							</h1>
+						</div><!-- /.page-header -->
+
+						<div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
+
+								<div class="row">
+									<!-- PAGE CONTENT BEGINS -->
+									<div class="col-xs-12">
+										
+										<form class="clearfix form-actions">
+											<div class="row">
+												<div class="col-sm-6">
+													<div class="form-group">
+														<label class="col-sm-3 control-label no-padding-right text-right" for="form-field-1">文章标题</label>
+				
+														<div class="col-sm-9">
+															<input type="text" id="form-field-1" placeholder="title" class="form-control" required="required" oninvalid="setCustomValidity('请输入文章标题')" oninput="setCustomValidity('')">
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-5">
+													<div class="form-group">
+														<label class="col-sm-3 control-label no-padding-right text-right" for="form-field-1">文章摘要</label>
+				
+														<div class="col-sm-9">
+															<input type="text" id="form-field-1" placeholder="autor" class="form-control" required="required" oninvalid="setCustomValidity('请输入文章摘要')" oninput="setCustomValidity('')">
+														</div>
+													</div>
+												</div>
+											</div>
+											<br />
+											<div class="row">
+												<div class="col-sm-6">
+													<div class="form-group">
+														<label class="col-sm-3 control-label no-padding-right text-right" for="form-field-1">文章分类</label>
+				
+														<div class="col-sm-9">
+															<input type="text" id="form-field-1" placeholder="class" class="form-control" required="required" oninvalid="setCustomValidity('请输入文章分类')" oninput="setCustomValidity('')">
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-6">
+													<div class="form-group">
+														<label class="col-sm-3 control-label no-padding-right text-right" for="form-field-1">文章缩略图</label>
+				
+														<div class="col-sm-9">
+															<input type="file" id="form-field-1" required="required" oninvalid="setCustomValidity('请选择文章缩略图')" oninput="setCustomValidity('')">
+														</div>
+													</div>
+												</div>
+											</div>
+											<br />
+											<div class="row">
+												<div class="form-group">
+													<label class="col-sm-10 col-sm-offset-1 control-label no-padding-right" for="form-field-1">文章正文</label>
+													<div class="col-sm-10 col-sm-offset-1">
+														<textarea class="form-control" name="financial.bz" id="form-field-1" style="margin: 0 auto;" required="required" oninvalid="setCustomValidity('请输入文章正文')" oninput="setCustomValidity('')">宝宝卖艺不卖身</textarea>
+														<p class="help-block text-danger"></p>
+														<script type="text/javascript">CKEDITOR.replace("financial.bz");</script>
+													</div>
+												</div>
+											</div>
+											<br />
+											<div class="row">
+												<div class="form-actions">
+													<div class="col-sm-offset-4 col-sm-5 text-center">
+														<button class="btn btn-primary" type="submit">
+															<i class="icon-ok bigger-110"></i>
+															保存
+														</button>
+			
+														&nbsp; &nbsp; &nbsp;
+														<button class="btn btn-info" type="reset">
+															<i class="icon-refresh bigger-110"></i>
+															重置
+														</button>
+														
+														&nbsp; &nbsp; &nbsp;
+														<a href="arctic.html" class="btn btn-success" type="button">
+															<i class="icon-undo bigger-110"></i>
+															返回
+														</a>
+													</div>
+												</div>
+											</div>
+											
+										</form>
+										
+										
+									</div>
+									
+								</div>
+							
+								<!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div><!-- /.main-content -->
+			</div>
+		</div>
+		
+		<!--<script src="js/U30_hou.js"></script>
+		<script type="text/javascript" src="ckeditor/ckeditor.js"></script>-->
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    	<script src="js/jquery-1.11.1.min.js"></script>
+    	<!-- Include all compiled plugins (below), or include individual files as needed -->
+   	 	<script src="js/bootstrap.min.js"></script>
+  	</body>
+</html>
